@@ -1,16 +1,7 @@
-﻿using System;
+﻿using mangkontrollKorsunov;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
-namespace mangkontrollKorsunov
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            //
-        }
-    }
-}
+Console.WriteLine("Hello, ZORA!");
+//Tegelane tegelane = new Tegelane("Aleksei", 300, "item");

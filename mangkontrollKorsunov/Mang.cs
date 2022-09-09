@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mangkontrollKorsunov
 {
-    abstract class Mang
+    public class Mang
     {
     }
 }

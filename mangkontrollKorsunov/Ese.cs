@@ -15,7 +15,7 @@ namespace mangkontrollKorsunov
             this.nimi = nimi;
             this.punktidearv = punktidearv;
         }
-        public override int punktideArv()
+        public virtual int PunktideArv()
         {
             return punktidearv;
         }
