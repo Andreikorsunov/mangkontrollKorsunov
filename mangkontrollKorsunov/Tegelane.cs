@@ -1,25 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static mangkontrollKorsunov.Ese;
-
-namespace mangkontrollKorsunov
+﻿namespace mangkontrollKorsunov
 {
     abstract class Tegelane : Uksus
     {
         private string nimi;
-        private List<Ese> ese = new List<Ese>() { };
+        private List<Ese> Esemed = new List<Ese>() {  };
         public Tegelane(string nimi)
         {
             this.nimi = nimi;
+        }
+        public Tegelane(Tegelane tegelane)
+        {
+            this.nimi = tegelane.nimi;
         }
         public void LisaEse()
         {
             
         }
-        /*            var lines = File.ReadLines("test.txt");
+        /*public virtual int PunktideArv()
+        {
+            return punktidearv;
+        }
+        var lines = File.ReadLines("esemed.txt");
  
             foreach (var line in lines)
             {

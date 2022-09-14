@@ -6,22 +6,27 @@ using System.Threading.Tasks;
 
 namespace mangkontrollKorsunov
 {
-    abstract class Ese : Uksus
+    internal class Ese : Uksus
     {
-        private string nimi;
+        private string nimetus;
         private int punktidearv;
-        public Ese(string nimi, int punktidearv)
+        public Ese(string nimetus, int punktidearv)
         {
-            this.nimi = nimi;
+            this.nimetus = nimetus;
             this.punktidearv = punktidearv;
         }
-        public virtual int PunktideArv()
+        public Ese(Ese ese)
+        {
+            this.nimetus = ese.nimetus;
+            this.punktidearv = ese.punktidearv;
+        }
+        public override int punktideArv()
         {
             return punktidearv;
         }
         public override string Info()
         {
-            return nimi;
+            return nimetus;
         }
     }
 }
