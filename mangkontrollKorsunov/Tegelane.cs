@@ -1,32 +1,44 @@
 ﻿namespace mangkontrollKorsunov
 {
-    abstract class Tegelane : Uksus
+    class Tegelane : Uksus
     {
         private string nimi;
-        private List<Ese> Esemed = new List<Ese>() {  };
+        private List<Ese> Esemed = new List<Ese>();
         public Tegelane(string nimi)
         {
             this.nimi = nimi;
+            Esemed = new List<Ese>();
         }
-        public Tegelane(Tegelane tegelane)
+        public void Info()
         {
-            this.nimi = tegelane.nimi;
+            string Info = $"Nimi - {nimi}, Punktide Arv - {punktideArv()}";
+            Console.WriteLine(Info);
         }
-        public void LisaEse()
+        public int punktideArv()
         {
-            
-        }
-        /*public virtual int PunktideArv()
-        {
-            return punktidearv;
-        }
-        var lines = File.ReadLines("esemed.txt");
- 
-            foreach (var line in lines)
+            int sum = 0;
+            foreach (Ese ese in Esemed)
             {
-                var tokens = line.Split(':');
- 
-                Console.WriteLine($"{tokens[0]} {tokens[1]} {tokens[2]}");
-            }*/
+                sum += ese.punktideArv();
+            }
+            return sum;
+        }
+        public string EsemedOnValjanud()
+        {
+            foreach (Ese ese in Esemed)
+            {
+                Console.WriteLine(ese);
+            }
+            return EsemedOnValjanud();
+        }
+        public int LisaEse(int ese)
+        {
+            return ese;
+        }
+
+        string Uksus.Info()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

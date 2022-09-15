@@ -1,7 +1,5 @@
 ﻿using mangkontrollKorsunov;
-using System;
-using System.Collections.Generic;
-using System.IO;
 
-Console.WriteLine("Hello, ZORA!");
-Tegelane tegelane = new Tegelane("aleksei");
+Console.WriteLine("Hello");
+Tegelane tegelane = new Tegelane("Chelovek");
+tegelane.Info();

@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace mangkontrollKorsunov
+﻿namespace mangkontrollKorsunov
 {
-    abstract class Uksus
+    interface Uksus
     {
-        public abstract int punktideArv();
-        public abstract string Info();
+        int punktideArv();
+        string Info();
     }
 }
